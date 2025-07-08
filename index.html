@@ -10,7 +10,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <img src="file_00000000a49061f6a790b103f9860807.png" alt="CoupleSync.ai Logo" class="hero-logo" style="width: 100%;" />
+            <img src="file_00000000a49061f6a790b103f9860807.png" alt="CoupleSync.ai Logo" class="hero-logo" style="width: 100%;" />
       <h1>Illuminate Your Relationship</h1>
       <p>AI-driven insights to deepen connection, foster understanding, and ignite growth—together.</p>
       <a href="#signup" class="btn-primary">Start Your Journey</a>
@@ -36,8 +36,10 @@
       <li>Engage with AI-Powered Coaching</li>
     </ol>
     <div class="prompts">
-      <h4>Integration Points</h4><button class="btn-primary copy-btn" data-target="individual-profile-prompt">Copy Individual Prompt</button><br>
-  <template id="individual-profile-prompt">
+      <h4>Integration Points</h4>
+      <div class="prompt-block">
+        <button class="btn-primary copy-btn" data-target="individual-profile-prompt">Copy Individual Prompt</button>
+        <pre class="code-block" id="individual-profile-prompt">
 You are CoupleSync.ai, a personalized relationship intelligence system designed to guide users through a deep psychological self-assessment and deliver an insightful, structured psychological profile.
 
 Your task is to:
@@ -305,15 +307,15 @@ Now analyzing your responses…”
 Here is the full analysis prompt:
 
 Analyze these responses thoroughly to generate a comprehensive psychological profile. The profile should summarize personality traits, emotional patterns, coping mechanisms, key motivations, relational attitudes, strengths, potential vulnerabilities, and areas for personal growth. Structure the profile clearly with headings for each category.
-
-  </template>
-
-  <button class="btn-primary copy-btn" data-target="couple-profile-prompt">Copy Couple Prompt</button><br>
-  <template id="couple-profile-prompt">
-    <!-- INSERT LLM PROMPT FOR COUPLE PROFILE HERE -->
-  </template>
-</div>
-
+        </pre>
+      </div>
+      <div class="prompt-block">
+        <button class="btn-primary copy-btn" data-target="couple-profile-prompt">Copy Couple Prompt</button>
+        <pre class="code-block" id="couple-profile-prompt">
+INSERT LLM PROMPT FOR COUPLE PROFILE HERE
+        </pre>
+      </div>
+    </div>
   </section>  <!-- Signup CTA -->  <section id="signup">
     <a href="#contact" class="btn-primary">Sign Up Now</a>
   </section>  <!-- Footer -->  <footer id="contact">
@@ -322,12 +324,13 @@ Analyze these responses thoroughly to generate a comprehensive psychological pro
   </footer>  <!-- Copy Prompt Script -->  <script>
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const tmpl = document.getElementById(btn.dataset.target);
-        const text = tmpl.innerText.trim();
+        const target = btn.getAttribute('data-target');
+        const codeEl = document.getElementById(target);
+        const text = codeEl.textContent.trim();
         navigator.clipboard.writeText(text).then(() => {
-          const originalText = btn.textContent;
+          const original = btn.textContent;
           btn.textContent = 'Copied!';
-          setTimeout(() => { btn.textContent = originalText; }, 2000);
+          setTimeout(() => btn.textContent = original, 2000);
         });
       });
     });
