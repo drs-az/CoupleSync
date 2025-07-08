@@ -13,7 +13,7 @@ body { font-family: var(--font-body); color: var(--text-color); background-color
 
 /* How It Works Section */ #how-it-works { padding: 4rem 2rem; } #how-it-works h2 { font-family: var(--font-heading); margin-bottom: 1rem; font-size: 2.5rem; text-align: center; } #how-it-works ol { max-width: 600px; margin: 0 auto 2rem; list-style-position: inside; } #how-it-works li { margin-bottom: 1rem; font-size: 1.125rem; }
 
-/* Prompt Blocks */ .prompts { max-width: 800px; margin: 0 auto; } .prompt-block { margin-bottom: 2rem; } .code-block { background: #f0f0f0; border-radius: 0.5rem; padding: 1rem; font-family: monospace; font-size: 0.875rem;
+/* Prompt Blocks */ .prompts { max-width: 800px; margin: 0 auto; } .prompt-block { margin-bottom: 2rem; } .code-block { background: #f0f0f0; border-radius: 0.5rem; padding: 0rem; font-family: monospace; font-size: 0.875rem;
 
 /* truncate to 10 lines */ max-height: calc(1.6em * 10); overflow-y: auto; overflow-x: auto; white-space: pre; width: 100%; }
 
