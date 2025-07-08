@@ -7,19 +7,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <!-- Hero -->
+  <section class="hero">
     <div class="container">
-      <img src="file-5UZDx8HgajvYiW94S6V8GD.webp" alt="CoupleSync.ai Logo" class="logo" />
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#contact">Contact</a>
-        <a href="#signup" class="btn-primary">Get Started</a>
-      </nav>
-    </div>
-  </header>  <!-- Hero -->  <section class="hero">
-    <div class="container">
+      <img src="assets/couplesync-logo.png" alt="CoupleSync.ai Logo" class="hero-logo" />
       <h1>Illuminate Your Relationship</h1>
       <p>AI-driven insights to deepen connection, foster understanding, and ignite growth—together.</p>
       <a href="#signup" class="btn-primary">Start Your Journey</a>
@@ -45,19 +36,33 @@
       <li>Engage with AI-Powered Coaching</li>
     </ol>
     <div class="prompts">
-      <h4>Integration Points</h4>
-      <template id="individual-profile-prompt">
-        <!-- INSERT LLM PROMPT FOR INDIVIDUAL PROFILE HERE -->
-      </template>
-      <template id="couple-profile-prompt">
-        <!-- INSERT LLM PROMPT FOR COUPLE PROFILE HERE -->
-      </template>
-    </div>
+      <h4>Integration Points</h4><button class="btn-copy" data-target="individual-profile-prompt">Copy Individual Prompt</button>
+  <template id="individual-profile-prompt">
+    <!-- INSERT LLM PROMPT FOR INDIVIDUAL PROFILE HERE -->
+  </template>
+
+  <button class="btn-copy" data-target="couple-profile-prompt">Copy Couple Prompt</button>
+  <template id="couple-profile-prompt">
+    <!-- INSERT LLM PROMPT FOR COUPLE PROFILE HERE -->
+  </template>
+</div>
+
   </section>  <!-- Signup CTA -->  <section id="signup">
     <a href="#contact" class="btn-primary">Sign Up Now</a>
   </section>  <!-- Footer -->  <footer id="contact">
     <p>© 2025 CoupleSync.ai. All rights reserved.</p>
     <p><a href="mailto:hello@couplesync.ai">hello@couplesync.ai</a></p>
-  </footer>
-</body>
+  </footer>  <!-- Copy Prompt Script -->  <script>
+    document.querySelectorAll('.btn-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tmpl = document.getElementById(btn.dataset.target);
+        const text = tmpl.innerText.trim();
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = originalText; }, 2000);
+        });
+      });
+    });
+  </script></body>
 </html>
