@@ -2,74 +2,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoupleSync.ai - Love smarter with CoupleSync.</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>CoupleSync.ai - Illuminate Your Relationship</title>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <img src="file-5UZDx8HgajvYiW94S6V8GD.webp" alt="CoupleSync.ai Logo" class="h-10">
-      <nav class="space-x-4">
-        <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
-        <a href="#how-it-works" class="text-gray-600 hover:text-gray-900">How It Works</a>
-        <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
-        <a href="#signup" class="px-4 py-2 bg-gradient-to-r from-orange-400 to-purple-600 text-white rounded-lg hover:opacity-90">Get Started</a>
+  <header>
+    <div class="container">
+      <img src="assets/couplesync-logo.png" alt="CoupleSync.ai Logo" class="logo" />
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact</a>
+        <a href="#signup" class="btn-primary">Get Started</a>
       </nav>
     </div>
-  </header>  <!-- Hero -->  <section class="bg-gradient-to-r from-orange-400 to-purple-600 text-white py-20">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Love smarter with CoupleSync.
-</h1>
-      <p class="text-lg md:text-2xl mb-8">AI-powered insights for stronger relationships.</p>
-      <a href="#signup" class="px-6 py-3 bg-white text-orange-500 font-semibold rounded-lg hover:opacity-90">Start Your Journey</a>
+  </header>  <!-- Hero -->  <section class="hero">
+    <div class="container">
+      <h1>Illuminate Your Relationship</h1>
+      <p>AI-driven insights to deepen connection, foster understanding, and ignite growth—together.</p>
+      <a href="#signup" class="btn-primary">Start Your Journey</a>
     </div>
-  </section>  <!-- Features -->  <section id="features" class="py-16">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Individual Profiles</h3>
-        <p>Deep psychological insights tailored to each partner, fostering self-awareness and personal growth.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">Couple Profiles</h3>
-        <p>Comprehensive analysis of your relationship dynamics, strengths, and areas for growth.</p>
-      </div>
-      <div>
-        <h3 class="text-2xl font-semibold mb-2">AI Coaching</h3>
-        <p>Real-time guidance and conversation prompts to navigate friction and celebrate connection.</p>
-      </div>
+  </section>  <!-- Features -->  <section id="features" class="features">
+    <div class="feature-card">
+      <h3>Individual Profiles</h3>
+      <p>Deep psychological insights tailored to each partner, fostering self-awareness and personal growth.</p>
     </div>
-  </section>  <!-- How It Works -->  <section id="how-it-works" class="bg-gray-100 py-16">
-    <div class="container mx-auto px-4 space-y-8">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">How It Works</h2>
-        <ol class="list-decimal list-inside space-y-2 text-lg">
-          <li>Create Your Individual Profile</li>
-          <li>Generate Your Couple Profile</li>
-          <li>Engage with AI-Powered Coaching</li>
-        </ol>
-      </div><!-- LLM Prompt Placeholders -->
-  <div>
-    <h4 class="text-2xl font-semibold mb-2">Integration Points</h4>
-    <!-- Code block placeholder for Individual Profile LLM prompt -->
-    <template id="individual-profile-prompt">
-      <!-- INSERT LLM PROMPT FOR INDIVIDUAL PROFILE HERE -->
-    </template>
-
-    <!-- Code block placeholder for Couple Profile LLM prompt -->
-    <template id="couple-profile-prompt">
-      <!-- INSERT LLM PROMPT FOR COUPLE PROFILE HERE -->
-    </template>
-  </div>
-</div>
-
-  </section>  <!-- Signup CTA -->  <section id="signup" class="py-16 text-center">
-    <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-orange-400 to-purple-600 text-white text-xl font-semibold rounded-lg hover:opacity-90">Sign Up Now</a>
-  </section>  <!-- Footer -->  <footer id="contact" class="bg-white border-t py-8">
-    <div class="container mx-auto px-4 text-center space-y-2">
-      <p>© 2025 CoupleSync.ai. All rights reserved.</p>
-      <p><a href="mailto:hello@couplesync.ai" class="text-orange-500 hover:underline">hello@couplesync.ai</a></p>
+    <div class="feature-card">
+      <h3>Couple Profiles</h3>
+      <p>Comprehensive analysis of your relationship dynamics, strengths, and areas for growth.</p>
     </div>
+    <div class="feature-card">
+      <h3>AI Coaching</h3>
+      <p>Real-time guidance and conversation prompts to navigate friction and celebrate connection.</p>
+    </div>
+  </section>  <!-- How It Works -->  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Create Your Individual Profile</li>
+      <li>Generate Your Couple Profile</li>
+      <li>Engage with AI-Powered Coaching</li>
+    </ol>
+    <div class="prompts">
+      <h4>Integration Points</h4>
+      <template id="individual-profile-prompt">
+        <!-- INSERT LLM PROMPT FOR INDIVIDUAL PROFILE HERE -->
+      </template>
+      <template id="couple-profile-prompt">
+        <!-- INSERT LLM PROMPT FOR COUPLE PROFILE HERE -->
+      </template>
+    </div>
+  </section>  <!-- Signup CTA -->  <section id="signup">
+    <a href="#contact" class="btn-primary">Sign Up Now</a>
+  </section>  <!-- Footer -->  <footer id="contact">
+    <p>© 2025 CoupleSync.ai. All rights reserved.</p>
+    <p><a href="mailto:hello@couplesync.ai">hello@couplesync.ai</a></p>
   </footer>
 </body>
 </html>
