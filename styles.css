@@ -1,0 +1,23 @@
+/* Import Google Fonts */ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;display=swap');
+
+:root { --gradient-primary: linear-gradient(135deg, #FF7E5F, #FEB47B); --gradient-secondary: linear-gradient(135deg, #667EEA, #764BA2); --font-heading: 'Playfair Display', serif; --font-body: 'Inter', sans-serif; --text-color: #333; --bg-light: #F9FAFB; --transition-speed: 0.3s; }
+
+{ margin: 0; padding: 0; box-sizing: border-box; }
+
+
+body { font-family: var(--font-body); color: var(--text-color); background-color: var(--bg-light); line-height: 1.6; }
+
+/* Header */ header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 100; } header .container { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; } header .logo { height: 48px; } header nav a { margin-left: 1.5rem; font-weight: 500; color: var(--text-color); text-decoration: none; position: relative; transition: color var(--transition-speed); } header nav a:hover { color: #000; }
+
+/* Hero Section */ .hero { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; background: var(--gradient-primary); color: #fff; overflow: hidden; } .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%); animation: rotateBg 20s linear infinite; } @keyframes rotateBg { from { transform: rotate(0deg); } to { transform: rotate(360deg); } } .hero h1 { font-family: var(--font-heading); font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 1rem; } .hero p { font-size: clamp(1rem, 3vw, 1.5rem); margin-bottom: 2rem; } .btn-primary { display: inline-block; padding: 0.75rem 2rem; font-weight: 600; text-decoration: none; border-radius: 2rem; background: var(--gradient-secondary); color: #fff; transition: transform var(--transition-speed), box-shadow var(--transition-speed); } .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+/* Features Section */ .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; padding: 4rem 2rem; } .feature-card { background: #fff; border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 2rem; text-align: center; transition: transform var(--transition-speed), box-shadow var(--transition-speed); } .feature-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.15); } .feature-card h3 { font-family: var(--font-heading); margin-bottom: 0.5rem; font-size: 1.5rem; } .feature-card p { font-size: 1rem; color: #555; }
+
+/* How It Works */ #how-it-works { padding: 4rem 2rem; } #how-it-works h2 { font-family: var(--font-heading); margin-bottom: 1rem; font-size: 2.5rem; text-align: center; } #how-it-works ol { max-width: 600px; margin: 0 auto; list-style-position: inside; } #how-it-works li { margin-bottom: 1rem; font-size: 1.125rem; }
+
+/* Templates / Prompts Section */ #how-it-works template { display: block; background: #f0f0f0; border-radius: 0.5rem; padding: 1rem; font-family: monospace; margin-top: 1rem; white-space: pre-wrap; }
+
+/* Signup CTA */ #signup { padding: 4rem 2rem; text-align: center; }
+
+/* Footer */ footer { background: #fff; border-top: 1px solid #e5e7eb; padding: 2rem; text-align: center; font-size: 0.875rem; } footer a { color: var(--gradient-primary); text-decoration: none; } footer a:hover { text-decoration: underline; }
+
